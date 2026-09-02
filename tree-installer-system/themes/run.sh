@@ -9,7 +9,7 @@ sudo bash /tmp/layan-all-colors/install.sh -s
 
 # Icon Theme
 git clone --depth 1 https://github.com/vinceliuice/Tela-icon-theme.git "/tmp/Tela-icon-theme"
-sudo bash /tmp/Tela-icon-theme/install.sh -a -d /usr/share/themes
+sudo bash /tmp/Tela-icon-theme/install.sh -a -d /usr/share/icons
 rm -rf "/tmp/Tela-icon-theme"
 
 # Curcor Theme
