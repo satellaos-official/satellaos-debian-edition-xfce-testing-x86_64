@@ -97,7 +97,7 @@ run_step "12" "lightdm-settings"          "bash    $script_source/lightdm-settin
 run_step "13" "update-user-configuration" "bash    $script_source/update-user-configuration/run.sh"
 run_step "14" "update-root-configuration" "bash    $script_source/update-root-configuration/run.sh"
 run_step "15" "pictures"                  "bash    $script_source/pictures/run.sh"
-run_step "16" "theme-dependencies"        "bash    $script_source/themes/run-part3.sh"
+run_step "16" "themes"                    "bash    $script_source/themes/run.sh"
 # run_step "19" "uca-creator"               "bash    $script_source/uca-creator/run.sh"
 # run_step "20" "driver-installer"          "bash    $script_source/driver-installer/run.sh"
 # run_step "21" "font-installer"            "bash    $script_source/font-installer/run.sh"
