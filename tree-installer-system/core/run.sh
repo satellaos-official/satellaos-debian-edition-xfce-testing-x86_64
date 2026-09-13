@@ -3,7 +3,9 @@ echo "Installing XFCE and Other Packages"
 sudo apt update
 sudo apt install --no-install-recommends -y \
   alsa-utils \
+  curl \
   dbus-x11 \
+  exfatprogs \
   gvfs \
   gvfs-backends \
   gvfs-fuse \
@@ -13,10 +15,12 @@ sudo apt install --no-install-recommends -y \
   orca \
   pavucontrol \
   pulseaudio \
+  rsync \
   thunar \
   thunar-archive-plugin \
   udiskie \
   udisks2 \
+  wget \
   x11-xserver-utils \
   xfce4 \
   xfce4-battery-plugin \

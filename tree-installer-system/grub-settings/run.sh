@@ -1,10 +1,10 @@
 #!/bin/bash
 
-source "$HOME/.satellaos-source/installer"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "Updating The GRUB BootLoader Settings"
 
-sudo cp $script_source/grub-settings/grub /etc/default/grub
+sudo cp $SCRIPT_DIR/grub /etc/default/grub
 
 sudo update-grub
 

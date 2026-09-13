@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source "$HOME/.satellaos-source/installer"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "Updating The LightDM Settings"
 
-sudo cp $script_source/lightdm-settings/lightdm/* /etc/lightdm/
+sudo cp $SCRIPT_DIR/lightdm/* /etc/lightdm/

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source "$HOME/.satellaos-source/installer"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "Cleaning The /etc/network/interfaces File"
 
-sudo cp $script_source/clean-network-interfaces/interfaces /etc/network/interfaces
+sudo cp $SCRIPT_DIR/interfaces /etc/network/interfaces

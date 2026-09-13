@@ -1,123 +1,35 @@
 #!/bin/bash
 
-# =============================================================================
-# Source Script
-# =============================================================================
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-bash "$HOME/satellaos-debian-edition-testing-x86_64/tree-installer-system/source/run.sh"
-source "$HOME/.satellaos-source/installer"
+$SCRIPT_DIR/tree-installer-system/network-manager/run.sh
 
-# =============================================================================
-# Log System
-# =============================================================================
+$SCRIPT_DIR/tree-installer-system/clean-network-interfaces/run.sh
 
-LOG_DIR="$HOME/.log-$project_name/logs"
-MASTER_LOG="$LOG_DIR/install.log"
-FAILED_STEPS=()
+$SCRIPT_DIR/tree-installer-system/core/run.sh
 
-mkdir -p "$LOG_DIR"
+$SCRIPT_DIR/tree-installer-system/update-sources.list/run.sh
 
-log() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$MASTER_LOG"
-}
+$SCRIPT_DIR/tree-installer-system/update-adduser/run.sh
 
-run_step() {
-    local step_num="$1"
-    local step_name="$2"
-    local cmd="$3"
-    local optional="${4:-false}"
-    local step_log="$LOG_DIR/${step_num}-${step_name}.log"
+$SCRIPT_DIR/tree-installer-system/hide-kernel-messages/run.sh
 
-    log "--------------------------------------------------------------"
-    log "START  >> Step $step_num: $step_name"
+$SCRIPT_DIR/tree-installer-system/flatpak-installer/run.sh
 
-    if (set -o pipefail; eval "$cmd" 2>&1 | tee "$step_log"); then
-        log "OK     >> Step $step_num: $step_name"
-    else
-        local exit_code=$?
-        log "FAILED >> Step $step_num: $step_name (exit code: $exit_code)"
-        log "         Log: $step_log"
+$SCRIPT_DIR/tree-installer-system/grub-settings/run.sh
 
-        if [ "$optional" = "true" ]; then
-            log "INFO   >> Step $step_num is optional, continuing..."
-        else
-            FAILED_STEPS+=("$step_num-$step_name")
-            log "ERROR  >> Non-optional step failed. Aborting."
-            log "--------------------------------------------------------------"
-            print_summary
-            exit 1
-        fi
-    fi
-}
+$SCRIPT_DIR/tree-installer-system/grub-theme/run.sh
 
-print_summary() {
-    log "=============================================================="
-    log "INSTALL SUMMARY"
-    log "=============================================================="
-    if [ ${#FAILED_STEPS[@]} -eq 0 ]; then
-        log "STATUS: All steps completed successfully."
-    else
-        log "STATUS: Installation failed."
-        log "Failed steps:"
-        for step in "${FAILED_STEPS[@]}"; do
-            log "  - $step"
-        done
-    fi
-    log "Master log : $MASTER_LOG"
-    log "Step logs  : $LOG_DIR/"
-    log "=============================================================="
-}
+# $SCRIPT_DIR/tree-installer-system/lightdm-settings/run.sh
 
-# =============================================================================
-# Main
-# =============================================================================
+$SCRIPT_DIR/tree-installer-system/pictures/run.sh
 
-log "=============================================================="
-log "Installing The SatellaOS System"
-log "=============================================================="
+$SCRIPT_DIR/tree-installer-system/themes/run.sh
 
-# =============================================================================
-# Steps
-# optional=true  → failure is logged but install continues
-# optional=false → failure aborts the install (default)
-# =============================================================================
+$SCRIPT_DIR/tree-installer-system/update-os-release/run.sh
 
-run_step "01" "update-adduser"            "bash    $script_source/update-adduser/run.sh"
-run_step "02" "installer-dependencies"    "bash    $script_source/installer-dependencies/run.sh"
-run_step "03" "network-manager"           "bash    $script_source/network-manager/run.sh"
-run_step "04" "clean-network-interfaces"  "bash    $script_source/clean-network-interfaces/run.sh"
-run_step "05" "update-sources-list"       "bash    $script_source/update-sources.list/run.sh"
-run_step "06" "core"                      "bash    $script_source/core/run.sh"
-run_step "07" "flatpak-installer"         "bash    $script_source/flatpak-installer/run.sh"
-run_step "08" "update-os-release"         "bash    $script_source/update-os-release/run.sh"
-run_step "09" "silent-kernel"             "bash    $script_source/silent-kernel/run.sh"
-run_step "10" "grub-settings"             "bash    $script_source/grub-settings/run.sh"
-run_step "11" "grub-theme"                "bash    $script_source/grub-theme/run.sh"
-run_step "12" "lightdm-settings"          "bash    $script_source/lightdm-settings/run.sh"
-run_step "13" "pictures"                  "bash    $script_source/pictures/run.sh"
-run_step "14" "themes"                    "bash    $script_source/themes/run.sh"
-# run_step "19" "uca-creator"               "bash    $script_source/uca-creator/run.sh"
-# run_step "20" "driver-installer"          "bash    $script_source/driver-installer/run.sh"
-# run_step "21" "font-installer"            "bash    $script_source/font-installer/run.sh"
-# run_step "22" "program-installer"         "bash    $script_source/program-installer/run.sh"
-# run_step "23" "fastfetch"                 "bash    $script_source/fastfetch/run.sh"
+$SCRIPT_DIR/tree-installer-system/xfce-interface/run.sh
 
-print_summary
+$SCRIPT_DIR/tree-installer-system/font-installer/run.sh
 
-while true; do
-    read -p "Do you want to reboot now? [Y/N]: " response
-    case "$response" in
-        [yY])
-            echo "Rebooting the system..."
-            sudo reboot
-            break
-            ;;
-        [nN])
-            echo "Reboot cancelled."
-            break
-            ;;
-        *)
-            echo "Invalid input! Please enter only 'Y' or 'N'."
-            ;;
-    esac
-done
+$SCRIPT_DIR/tree-installer-system/fastfetch/run.sh

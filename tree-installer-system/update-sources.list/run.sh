@@ -1,9 +1,9 @@
 #!/bin/bash
 
-source "$HOME/.satellaos-source/installer"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "Enabling The Non-Free Repos"
 
-sudo cp $script_source/update-sources.list/sources.list /etc/apt/sources.list
+sudo cp $SCRIPT_DIR/sources.list /etc/apt/sources.list
 
 sudo apt update

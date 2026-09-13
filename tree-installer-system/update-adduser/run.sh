@@ -1,3 +1,3 @@
-source "$HOME/.satellaos-source/installer"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-sudo cp $script_source/update-adduser/adduser.conf /etc/adduser.conf
+sudo cp $SCRIPT_DIR/adduser.conf /etc/adduser.conf

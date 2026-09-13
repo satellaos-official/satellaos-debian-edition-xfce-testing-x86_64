@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "$HOME/.satellaos-source/installer"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 while true; do
     read -p "Do you want to install fastfetch? (Y/N): " install_choice
@@ -13,9 +13,9 @@ while true; do
                 case "$config_choice" in
                     [yY])
                         mkdir -p "$HOME/.config/fastfetch"
-                        cp "$script_source/fastfetch/config.jsonc" "$HOME/.config/fastfetch/config.jsonc"
+                        cp "$SCRIPT_DIR/config.jsonc" "$HOME/.config/fastfetch/config.jsonc"
                         sudo mkdir -p /etc/skel/.config/fastfetch
-                        sudo cp "$script_source/fastfetch/config.jsonc" /etc/skel/.config/fastfetch/config.jsonc
+                        sudo cp "$SCRIPT_DIR/config.jsonc" /etc/skel/.config/fastfetch/config.jsonc
                         break
                         ;;
                     [nN])
