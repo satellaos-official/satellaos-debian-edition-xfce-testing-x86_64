@@ -32,4 +32,6 @@ bash $SCRIPT_DIR/tree-installer-system/pictures/run.sh
 
 # bash $SCRIPT_DIR/tree-installer-system/xfce-interface/run.sh
 
+bash $SCRIPT_DIR/tree-installer-system/fastfetch/run.sh
+
 bash $SCRIPT_DIR/tree-installer-system/font-installer/run.sh
