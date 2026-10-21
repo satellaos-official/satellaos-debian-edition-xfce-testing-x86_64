@@ -1,0 +1,113 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "display": {
+        "separator": "",
+        "size": {
+            "maxPrefix": "GB",
+            "ndigits": 1
+        }
+    },
+    "modules": [
+        {
+            "type": "custom",
+            "format": "{#keys}╭────────────────────────────────────────────────────────╮{#}"
+        },
+        {
+            "type": "title",
+            "key": "{#keys}\u001b[57C│\u001b[58D│{#} ",
+            "format": "{#keys}{user-name}{#}@{#keys}{host-name}{#}"
+        },
+        {
+            "type": "custom",
+            "format": "{#keys}├────────────────────────────────────────────────────────┤{#}"
+        },
+        {
+            "type": "os",
+            "key": "\u001b[57C│\u001b[58D│ OS: "
+        },
+        {
+            "type": "host",
+            "key": "\u001b[57C│\u001b[58D│ Host: "
+        },
+        {
+            "type": "kernel",
+            "key": "\u001b[57C│\u001b[58D│ Kernel: ",
+            "format": "{release}"
+        },
+        {
+            "type": "uptime",
+            "key": "\u001b[57C│\u001b[58D│ Uptime: "
+        },
+        {
+            "type": "packages",
+            "key": "\u001b[57C│\u001b[58D│ Packages: "
+        },
+        {
+            "type": "shell",
+            "key": "\u001b[57C│\u001b[58D│ Shell: "
+        },
+        {
+            "type": "display",
+            "key": "\u001b[57C│\u001b[58D│ Resolution: ",
+            "compactType": "original"
+        },
+        {
+            "type": "de",
+            "key": "\u001b[57C│\u001b[58D│ DE: "
+        },
+        {
+            "type": "wm",
+            "key": "\u001b[57C│\u001b[58D│ WM: "
+        },
+        {
+            "type": "wmtheme",
+            "key": "\u001b[57C│\u001b[58D│ WM Theme: "
+        },
+        {
+            "type": "theme",
+            "key": "\u001b[57C│\u001b[58D│ Theme: "
+        },
+        {
+            "type": "icons",
+            "key": "\u001b[57C│\u001b[58D│ Icons: "
+        },
+        {
+            "type": "terminal",
+            "key": "\u001b[57C│\u001b[58D│ Terminal: "
+        },
+        {
+            "type": "terminalfont",
+            "key": "\u001b[57C│\u001b[58D│ Terminal Font: ",
+            "format": "{/name}{-}{/}{name}{?size} {size}{?}"
+        },
+        {
+            "type": "cpu",
+            "key": "\u001b[57C│\u001b[58D│ CPU: "
+        },
+        {
+            "type": "gpu",
+            "key": "\u001b[57C│\u001b[58D│ GPU: "
+        },
+        {
+            "type": "command",
+            "key": "\u001b[57C│\u001b[58D│ Memory: ",
+            "text": "free -m | awk '/^Mem:/{printf \"%d MiB / %d MiB\", $3, $2}'"
+        },
+        {
+            "type": "disk",
+            "key": "\u001b[57C│\u001b[58D│ Disk ({mountpoint}): ",
+            "format": "{size-used} / {size-total}"
+        },
+        {
+            "type": "command",
+            "key": "\u001b[57C│\u001b[58D│ Swap: ",
+            "text": "free -m | awk '/^Swap:/{u=($3==0)?\"0 B\":$3\" MiB\"; printf \"%s / %d MiB\", u, $2}'"
+        },
+        {
+            "type": "custom",
+            "format": "{#keys}╰────────────────────────────────────────────────────────╯{#}"
+        },
+        "break",
+        "colors"
+    ]
+}

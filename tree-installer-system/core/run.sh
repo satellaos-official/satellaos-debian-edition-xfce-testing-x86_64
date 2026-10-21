@@ -1,6 +1,5 @@
 #!/bin/bash
 echo "Installing XFCE and Other Packages"
-sudo apt update
 sudo apt install --no-install-recommends -y \
   alsa-utils \
   curl \
@@ -43,15 +42,9 @@ sudo apt install --no-install-recommends -y \
   xfce4-whiskermenu-plugin \
   xfdesktop4 \
   xfwm4 \
-  xorg
-
-echo "Installing Fonts"
-sudo apt install --install-recommends -y \
+  xorg \
   fonts-bebas-neue \
-  fonts-montserrat
-
-echo "Installing policykit components"
-sudo apt install --no-install-recommends -y \
+  fonts-montserrat \
   mate-polkit \
   pkexec \
   polkitd
