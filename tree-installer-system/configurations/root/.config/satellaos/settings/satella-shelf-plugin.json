@@ -1,0 +1,52 @@
+{
+  "instances" : {
+    "1" : {
+      "active-color" : "rgb(53,132,228)",
+      "active-style" : 1,
+      "current-screen-only" : false,
+      "current-workspace-only" : false,
+      "expand" : false,
+      "force-icon-size" : false,
+      "icon-size" : 24,
+      "inactive-color" : "rgb(51,209,122)",
+      "inactive-style" : 1,
+      "indicator-side" : 0,
+      "indicator-theme-color" : true,
+      "list-only-multi" : true,
+      "middle-click" : 2,
+      "pinned" : [
+        "thunar.desktop",
+        "xfce4-terminal.desktop",
+        "xfce4-web-browser.desktop"
+      ],
+      "show-previews" : true,
+      "show-unpinned" : true,
+      "show-window-count" : false,
+      "spacing" : 2,
+      "super-alone" : false,
+      "super-numbers" : false
+    },
+    "default" : {
+      "active-color" : "#3584e4",
+      "active-style" : 1,
+      "current-screen-only" : false,
+      "current-workspace-only" : false,
+      "expand" : false,
+      "force-icon-size" : false,
+      "icon-size" : 32,
+      "inactive-color" : "#33d17a",
+      "inactive-style" : 1,
+      "indicator-side" : 0,
+      "indicator-theme-color" : true,
+      "list-only-multi" : true,
+      "middle-click" : 2,
+      "pinned" : [],
+      "show-previews" : false,
+      "show-unpinned" : true,
+      "show-window-count" : false,
+      "spacing" : 2,
+      "super-alone" : false,
+      "super-numbers" : false
+    }
+  }
+}

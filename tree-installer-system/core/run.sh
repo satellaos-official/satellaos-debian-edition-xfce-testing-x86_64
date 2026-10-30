@@ -4,21 +4,36 @@ sudo apt install --no-install-recommends -y \
   alsa-utils \
   curl \
   dbus-x11 \
+  engrampa \
   exfatprogs \
+  fonts-bebas-neue \
+  fonts-montserrat \
+  galculator \
   gvfs \
   gvfs-backends \
   gvfs-fuse \
+  libwebp7 \
   lightdm \
   lightdm-gtk-greeter \
+  lightdm-gtk-greeter-settings \
+  mate-polkit \
+  mousepad \
   ntfs-3g \
+  onboard \
   orca \
   pavucontrol \
+  pkexec \
+  polkitd \
   pulseaudio \
+  ristretto \
   rsync \
   thunar \
   thunar-archive-plugin \
+  tumbler \
+  tumbler-plugins-extra \
   udiskie \
   udisks2 \
+  webp-pixbuf-loader \
   wget \
   x11-xserver-utils \
   xfce4 \
@@ -36,15 +51,11 @@ sudo apt install --no-install-recommends -y \
   xfce4-power-manager-plugins \
   xfce4-pulseaudio-plugin \
   xfce4-screensaver \
+  xfce4-screenshooter \
   xfce4-session \
   xfce4-settings \
+  xfce4-taskmanager \
   xfce4-terminal \
   xfce4-whiskermenu-plugin \
-  xfdesktop4 \
   xfwm4 \
-  xorg \
-  fonts-bebas-neue \
-  fonts-montserrat \
-  mate-polkit \
-  pkexec \
-  polkitd
+  xorg

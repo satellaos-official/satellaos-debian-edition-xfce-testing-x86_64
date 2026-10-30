@@ -1,0 +1,75 @@
+{
+  "instances" : {
+    "2" : {
+      "height-pct" : 80,
+      "modern" : {
+        "actions" : {
+          "0" : {
+            "command" : "xdg-open \"https://duckduckgo.com/?q=%u\"",
+            "name" : "Web search",
+            "prefix" : "?"
+          },
+          "1" : {
+            "command" : "xdg-open \"https://en.wikipedia.org/w/index.php?search=%u\"",
+            "name" : "Wikipedia",
+            "prefix" : "w "
+          },
+          "2" : {
+            "command" : "sh -c %s",
+            "name" : "Run command",
+            "prefix" : "!"
+          },
+          "count" : 3
+        },
+        "category-icon-size" : 16,
+        "category-style" : 0,
+        "commands" : {
+          "edit" : {
+            "command" : "menulibre",
+            "enabled" : false
+          },
+          "lock" : {
+            "command" : "xflock4",
+            "enabled" : true
+          },
+          "logout" : {
+            "command" : "xfce4-session-logout",
+            "enabled" : true
+          },
+          "settings" : {
+            "command" : "xfce4-settings-manager",
+            "enabled" : true
+          },
+          "switch-user" : {
+            "command" : "dm-tool switch-to-greeter",
+            "enabled" : false
+          }
+        },
+        "commands-position" : 1,
+        "default-view" : -2,
+        "double-click" : false,
+        "favorites" : [
+          "xfce4-web-browser.desktop",
+          "xfce4-file-manager.desktop",
+          "xfce4-terminal.desktop",
+          "org.xfce.ristretto.desktop",
+          "org.xfce.mousepad.desktop"
+        ],
+        "hover-switch" : false,
+        "item-icon-size" : 32,
+        "recent" : [],
+        "recent-max" : 10,
+        "search-position" : 0,
+        "show-all" : true,
+        "show-descriptions" : true,
+        "show-favorites" : true,
+        "show-recent" : true,
+        "show-tooltips" : false,
+        "show-user-avatar" : false,
+        "show-user-name" : true,
+        "sidebar" : 0
+      },
+      "width-pct" : 50
+    }
+  }
+}
