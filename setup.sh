@@ -18,7 +18,7 @@ bash $SCRIPT_DIR/tree-installer-system/flatpak-installer/run.sh
 
 bash $SCRIPT_DIR/tree-installer-system/grub-settings/run.sh
 
-bash $SCRIPT_DIR/tree-installer-system/satellaos-plugins/run.sh
+bash $SCRIPT_DIR/tree-installer-system/satellaos-builds/run.sh
 
 bash $SCRIPT_DIR/tree-installer-system/core/run.sh
 
