@@ -26,8 +26,6 @@ bash $SCRIPT_DIR/tree-installer-system/grub-theme/run.sh
 
 bash $SCRIPT_DIR/tree-installer-system/themes/run.sh
 
-bash $SCRIPT_DIR/tree-installer-system/pictures/run.sh
-
 bash $SCRIPT_DIR/tree-installer-system/configurations/run.sh
 
 bash $SCRIPT_DIR/tree-installer-system/fastfetch/run.sh
