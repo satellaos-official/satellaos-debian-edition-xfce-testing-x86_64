@@ -9,103 +9,91 @@
     },
     "modules": [
         {
-            "type": "custom",
-            "format": "{#keys}╭────────────────────────────────────────────────────────╮{#}"
-        },
-        {
             "type": "title",
-            "key": "{#keys}\u001b[57C│\u001b[58D│{#} ",
             "format": "{#keys}{user-name}{#}@{#keys}{host-name}{#}"
         },
-        {
-            "type": "custom",
-            "format": "{#keys}├────────────────────────────────────────────────────────┤{#}"
-        },
+        "break",
         {
             "type": "os",
-            "key": "\u001b[57C│\u001b[58D│ OS: "
+            "key": " OS: "
         },
         {
             "type": "host",
-            "key": "\u001b[57C│\u001b[58D│ Host: "
+            "key": " Host: "
         },
         {
             "type": "kernel",
-            "key": "\u001b[57C│\u001b[58D│ Kernel: ",
+            "key": " Kernel: ",
             "format": "{release}"
         },
         {
             "type": "uptime",
-            "key": "\u001b[57C│\u001b[58D│ Uptime: "
+            "key": " Uptime: "
         },
         {
             "type": "packages",
-            "key": "\u001b[57C│\u001b[58D│ Packages: "
+            "key": " Packages: "
         },
         {
             "type": "shell",
-            "key": "\u001b[57C│\u001b[58D│ Shell: "
+            "key": " Shell: "
         },
         {
             "type": "display",
-            "key": "\u001b[57C│\u001b[58D│ Resolution: ",
+            "key": " Resolution: ",
             "compactType": "original"
         },
         {
             "type": "de",
-            "key": "\u001b[57C│\u001b[58D│ DE: "
+            "key": " DE: "
         },
         {
             "type": "wm",
-            "key": "\u001b[57C│\u001b[58D│ WM: "
+            "key": " WM: "
         },
         {
             "type": "wmtheme",
-            "key": "\u001b[57C│\u001b[58D│ WM Theme: "
+            "key": " WM Theme: "
         },
         {
             "type": "theme",
-            "key": "\u001b[57C│\u001b[58D│ Theme: "
+            "key": " Theme: "
         },
         {
             "type": "icons",
-            "key": "\u001b[57C│\u001b[58D│ Icons: "
+            "key": " Icons: "
         },
         {
             "type": "terminal",
-            "key": "\u001b[57C│\u001b[58D│ Terminal: "
+            "key": " Terminal: "
         },
         {
             "type": "terminalfont",
-            "key": "\u001b[57C│\u001b[58D│ Terminal Font: ",
+            "key": " Terminal Font: ",
             "format": "{/name}{-}{/}{name}{?size} {size}{?}"
         },
         {
             "type": "cpu",
-            "key": "\u001b[57C│\u001b[58D│ CPU: "
+            "key": " CPU: "
         },
         {
             "type": "gpu",
-            "key": "\u001b[57C│\u001b[58D│ GPU: "
+            "key": " GPU: "
         },
         {
             "type": "command",
-            "key": "\u001b[57C│\u001b[58D│ Memory: ",
+            "key": " Memory: ",
             "text": "free -m | awk '/^Mem:/{printf \"%d MiB / %d MiB\", $3, $2}'"
         },
         {
             "type": "disk",
-            "key": "\u001b[57C│\u001b[58D│ Disk ({mountpoint}): ",
+            "key": " Disk ({mountpoint}): ",
             "format": "{size-used} / {size-total}"
         },
         {
             "type": "command",
-            "key": "\u001b[57C│\u001b[58D│ Swap: ",
+            "key": " Swap: ",
             "text": "free -m | awk '/^Swap:/{u=($3==0)?\"0 B\":$3\" MiB\"; printf \"%s / %d MiB\", u, $2}'"
-        },
-        {
-            "type": "custom",
-            "format": "{#keys}╰────────────────────────────────────────────────────────╯{#}"
         },
         "break",
         "colors"

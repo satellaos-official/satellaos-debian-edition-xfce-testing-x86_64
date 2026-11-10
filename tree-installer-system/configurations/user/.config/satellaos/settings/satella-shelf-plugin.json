@@ -15,6 +15,7 @@
       "list-only-multi" : true,
       "middle-click" : 2,
       "pinned" : [
+        "Antigravity Tools.desktop",
         "thunar.desktop",
         "xfce4-terminal.desktop",
         "xfce4-web-browser.desktop"
