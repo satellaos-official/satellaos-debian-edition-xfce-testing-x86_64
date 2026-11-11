@@ -1,54 +1,8 @@
 {
   "instances" : {
-    "10" : {
-      "button-image" : "/usr/share/satellaos-logos/light/satellaos-logo-light.svg",
-      "classic" : {
-        "top" : [
-          "+run",
-          "+terminal",
-          "+filemanager",
-          "-mail",
-          "+browser",
-          "-sep1",
-          "+cat:8",
-          "+cat:6",
-          "+cat:0",
-          "+cat:7",
-          "-cat:1",
-          "-cat:2",
-          "-cat:3",
-          "-cat:4",
-          "-cat:5",
-          "-cat:10",
-          "+cat:9",
-          "-sep2",
-          "+sysinfo",
-          "+about",
-          "-sep3",
-          "+quit"
-        ]
-      },
-      "fullscreen-layout" : 0,
-      "grid-cols" : 8,
-      "grid-rows" : 4,
-      "mode" : 0,
-      "modern" : {
-        "favorites" : [],
-        "recent" : [
-          "sublime_text.desktop",
-          "satella-system-info.desktop",
-          "satella-vm-manager.desktop",
-          "lightdm-gtk-greeter-settings.desktop",
-          "com.protonvpn.www.desktop",
-          "org.kde.ghostwriter.desktop",
-          "htop.desktop"
-        ]
-      },
-      "opacity" : 90
-    },
     "2" : {
-      "button-image" : "/usr/share/satellaos-core/pictures/logo/light/so-light.svg",
-      "fullscreen-layout" : 1,
+      "button-image" : "/usr/share/satellaos-logos/light/satellaos-logo-light.svg",
+      "fullscreen-layout" : 0,
       "grid-cols" : 8,
       "grid-rows" : 4,
       "height-pct" : 80,
@@ -77,7 +31,7 @@
         "commands" : {
           "edit" : {
             "command" : "menulibre",
-            "enabled" : false
+            "enabled" : true
           },
           "lock" : {
             "command" : "xflock4",
@@ -102,24 +56,19 @@
         "favorites" : [
           "xfce4-web-browser.desktop",
           "xfce4-file-manager.desktop",
-          "xfce4-terminal.desktop",
+          "xfce4-terminal-emulator.desktop",
           "org.xfce.ristretto.desktop",
+          "engrampa.desktop",
+          "onboard.desktop",
           "org.xfce.mousepad.desktop",
-          "Antigravity Tools.desktop"
+          "galculator.desktop",
+          "satella-system-info.desktop"
         ],
         "hover-switch" : false,
         "item-icon-size" : 32,
         "recent" : [
-          "firefox.desktop",
-          "google-chrome.desktop",
-          "xfce-session-settings.desktop",
-          "com.protonvpn.www.desktop",
           "satella-system-info.desktop",
-          "org.inkscape.Inkscape.desktop",
-          "xfce4-about.desktop",
-          "xfce-ui-settings.desktop",
-          "galculator.desktop",
-          "Antigravity Tools.desktop"
+          "org.xfce.mousepad.desktop"
         ],
         "recent-max" : 10,
         "search-position" : 0,
@@ -128,21 +77,12 @@
         "show-favorites" : true,
         "show-recent" : true,
         "show-tooltips" : false,
-        "show-user-avatar" : false,
+        "show-user-avatar" : true,
         "show-user-name" : true,
         "sidebar" : 0
       },
       "opacity" : 90,
       "width-pct" : 50
-    },
-    "9" : {
-      "modern" : {
-        "favorites" : [],
-        "recent" : [
-          "kdocker.desktop",
-          "xfce4-notifyd-config.desktop"
-        ]
-      }
     }
   }
 }
