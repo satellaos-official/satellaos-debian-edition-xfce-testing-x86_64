@@ -41,7 +41,6 @@ sudo apt install --no-install-recommends -y \
   xfce4-clipman \
   xfce4-clipman-plugin \
   xfce4-datetime-plugin \
-  xfce4-docklike-plugin \
   xfce4-indicator-plugin \
   xfce4-notifyd \
   xfce4-panel \
@@ -50,12 +49,10 @@ sudo apt install --no-install-recommends -y \
   xfce4-power-manager-data \
   xfce4-power-manager-plugins \
   xfce4-pulseaudio-plugin \
-  xfce4-screensaver \
   xfce4-screenshooter \
   xfce4-session \
   xfce4-settings \
   xfce4-taskmanager \
   xfce4-terminal \
-  xfce4-whiskermenu-plugin \
   xfwm4 \
   xorg

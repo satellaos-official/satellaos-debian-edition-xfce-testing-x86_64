@@ -31,3 +31,8 @@ bash $SCRIPT_DIR/tree-installer-system/configurations/run.sh
 bash $SCRIPT_DIR/tree-installer-system/fastfetch/run.sh
 
 bash $SCRIPT_DIR/tree-installer-system/font-installer/run.sh
+
+bash $SCRIPT_DIR/tree-installer-system/program-installer/run.sh
+
+
+sudo reboot
