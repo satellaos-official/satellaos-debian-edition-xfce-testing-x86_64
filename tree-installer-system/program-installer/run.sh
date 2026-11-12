@@ -32,7 +32,6 @@ PROGRAMS=(
     "Flatseal|Flatpak"
     "Free Download Manager|Apt"
     "Free Download Manager|Flatpak"
-    "Galculator|Apt"
     "Ghostwriter|Apt"
     "GIMP|Apt"
     "GIMP|Flatpak"
@@ -80,14 +79,13 @@ PROGRAMS=(
     "Thunderbird|Apt"
     "Timeshift|Apt"
     "Unrar Free|Apt"
-    "Unrar Non-Free|Apt"
+    "Unrar|Apt"
     "Virtualbox|Apt"
     "VLC Media Player|Apt"
     "VS Code|Apt"
     "WineHQ Stable|Apt"
     "Wireshark|Apt"
     "XFCE4 Screen Saver|Apt"
-    "XFCE4 Task Manager|Apt"
 )
 
 # ---------------------------------------------------------------------------
@@ -193,7 +191,7 @@ install_08() { # Vivaldi
 }
 
 install_09() { # Tor
-    apt_install tor
+    apt_install torbrowser-launcher
 }
 
 install_10() { # Zen Browser
@@ -353,55 +351,54 @@ install_17() { # Free Download Manager (Apt)
 }
 
 install_18() { flatpak_install org.freedownloadmanager.Manager; }  # Free Download Manager (Flatpak)
-install_19() { apt_install galculator; }                           # Galculator
-install_20() { apt_install ghostwriter; }                          # Ghostwriter
-install_21() { apt_install gimp; }                                 # GIMP (Apt)
-install_22() { flatpak_install org.gimp.GIMP; }                    # GIMP (Flatpak)
-install_23() { apt_install gnome-characters; }                     # Gnome Characters
-install_24() { apt_install gnome-disk-utility; }                   # Gnome Disk Utility
-install_25() { apt_install gnome-software; }                       # Gnome Software
-install_26() { apt_install gparted; }                              # GParted
-install_27() { apt_install grub-customizer; }                      # GRUB Customizer
-install_28() { apt_install gucharmap; }                            # Gucharmap
-install_29() { apt_install heroic; }                               # Heroic (Apt)
-install_30() { flatpak_install com.heroicgameslauncher.hgl; }      # Heroic (Flatpak)
-install_31() { apt_install inkscape; }                             # Inkscape (Apt)
-install_32() { flatpak_install org.inkscape.Inkscape; }            # Inkscape (Flatpak)
-install_33() { apt_install_min kdeconnect; }                       # KDE Connect
-install_34() { apt_install_min plasma-discover; }                  # KDE Discover
-install_35() { apt_install keepassxc; }                            # KeePassXC
-install_36() { apt_install krita; }                                # Krita (Apt)
-install_37() { flatpak_install org.kde.krita; }                    # Krita (Flatpak)
-install_38() { apt_install_min libreoffice-writer libreoffice-gtk3; }   # LibreOffice Writer
-install_39() { apt_install_min libreoffice-calc libreoffice-gtk3; }     # LibreOffice Calc
-install_40() { apt_install_min libreoffice-impress libreoffice-gtk3; }  # LibreOffice Impress
-install_41() { apt_install_min libreoffice-draw libreoffice-gtk3; }     # LibreOffice Draw
-install_42() { apt_install_min libreoffice-base libreoffice-gtk3; }     # LibreOffice Base
-install_43() { apt_install_min libreoffice-math libreoffice-gtk3; }     # LibreOffice Math
-install_44() { apt_install libreoffice libreoffice-gtk3; }              # LibreOffice All
+install_19() { apt_install ghostwriter; }                          # Ghostwriter
+install_20() { apt_install gimp; }                                 # GIMP (Apt)
+install_21() { flatpak_install org.gimp.GIMP; }                    # GIMP (Flatpak)
+install_22() { apt_install gnome-characters; }                     # Gnome Characters
+install_23() { apt_install gnome-disk-utility; }                   # Gnome Disk Utility
+install_24() { apt_install gnome-software; }                       # Gnome Software
+install_25() { apt_install gparted; }                              # GParted
+install_26() { apt_install grub-customizer; }                      # GRUB Customizer
+install_27() { apt_install gucharmap; }                            # Gucharmap
+install_28() { apt_install heroic; }                               # Heroic (Apt)
+install_29() { flatpak_install com.heroicgameslauncher.hgl; }      # Heroic (Flatpak)
+install_30() { apt_install inkscape; }                             # Inkscape (Apt)
+install_31() { flatpak_install org.inkscape.Inkscape; }            # Inkscape (Flatpak)
+install_32() { apt_install_min kdeconnect; }                       # KDE Connect
+install_33() { apt_install_min plasma-discover; }                  # KDE Discover
+install_34() { apt_install keepassxc; }                            # KeePassXC
+install_35() { apt_install krita; }                                # Krita (Apt)
+install_36() { flatpak_install org.kde.krita; }                    # Krita (Flatpak)
+install_37() { apt_install_min libreoffice-writer libreoffice-gtk3; }   # LibreOffice Writer
+install_38() { apt_install_min libreoffice-calc libreoffice-gtk3; }     # LibreOffice Calc
+install_39() { apt_install_min libreoffice-impress libreoffice-gtk3; }  # LibreOffice Impress
+install_40() { apt_install_min libreoffice-draw libreoffice-gtk3; }     # LibreOffice Draw
+install_41() { apt_install_min libreoffice-base libreoffice-gtk3; }     # LibreOffice Base
+install_42() { apt_install_min libreoffice-math libreoffice-gtk3; }     # LibreOffice Math
+install_43() { apt_install libreoffice libreoffice-gtk3; }              # LibreOffice All
 
-install_45() { # Localsend (Apt)
+install_44() { # Localsend (Apt)
     local deb_url
     deb_url=$(curl -s https://api.github.com/repos/localsend/localsend/releases/latest | grep -oE "https://[^\"]*linux-x86-64\.deb" | head -n1)
     wget -O "$INSTALL_DIR/localsend-x86_64.deb" "$deb_url"
     apt_install "$INSTALL_DIR/localsend-x86_64.deb"
 }
 
-install_46() { flatpak_install org.localsend.localsend_app; }      # Localsend (Flatpak)
-install_47() { apt_install lutris; }                               # Lutris (Apt)
-install_48() { flatpak_install net.lutris.Lutris; }                # Lutris (Flatpak)
-install_49() { apt_install menulibre; }                            # Menulibre
-install_50() { apt_install mintstick; }                            # Mint Stick
-install_51() { flatpak_install io.missioncenter.MissionCenter; }   # Mission Center
-install_52() { apt_install mpv; }                                  # Mpv
-install_53() { flatpak_install com.obsproject.Studio; }            # OBS Studio
-install_54() { flatpak_install com.github.PintaProject.Pinta; }    # Pinta
-install_55() { flatpak_install com.poweriso.PowerISO; }            # PowerISO Unofficial
-install_56() { flatpak_install com.protonvpn.www; }                # ProtonVPN Unofficial
-install_57() { apt_install_min qemu-system-x86 qemu-utils libvirt-daemon-system; }  # Qemu
-install_58() { apt_install_min virt-manager qemu-system-x86 qemu-utils libvirt-daemon-system libvirt-clients virtinst; }  # Virt Manager
+install_45() { flatpak_install org.localsend.localsend_app; }      # Localsend (Flatpak)
+install_46() { apt_install lutris; }                               # Lutris (Apt)
+install_47() { flatpak_install net.lutris.Lutris; }                # Lutris (Flatpak)
+install_48() { apt_install menulibre; }                            # Menulibre
+install_49() { apt_install mintstick; }                            # Mint Stick
+install_50() { flatpak_install io.missioncenter.MissionCenter; }   # Mission Center
+install_51() { apt_install mpv; }                                  # Mpv
+install_52() { flatpak_install com.obsproject.Studio; }            # OBS Studio
+install_53() { flatpak_install com.github.PintaProject.Pinta; }    # Pinta
+install_54() { flatpak_install com.poweriso.PowerISO; }            # PowerISO Unofficial
+install_55() { flatpak_install com.protonvpn.www; }                # ProtonVPN Unofficial
+install_56() { apt_install_min qemu-system-x86 qemu-utils libvirt-daemon-system; }  # Qemu
+install_57() { apt_install_min virt-manager qemu-system-x86 qemu-utils libvirt-daemon-system libvirt-clients virtinst; }  # Virt Manager
 
-install_59() { # Signal
+install_58() { # Signal
     curl -fsSL https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > "$INSTALL_DIR/signal-desktop-keyring.gpg"
     sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg < "$INSTALL_DIR/signal-desktop-keyring.gpg" > /dev/null
     curl -fsSLo "$INSTALL_DIR/signal-desktop.sources" https://updates.signal.org/static/desktop/apt/signal-desktop.sources
@@ -410,9 +407,9 @@ install_59() { # Signal
     apt_install signal-desktop
 }
 
-install_60() { flatpak_install com.spotify.Client; }               # Spotify Unofficial
+install_59() { flatpak_install com.spotify.Client; }               # Spotify Unofficial
 
-install_61() { # Steam
+install_60() { # Steam
     sudo dpkg --add-architecture i386
     curl -fsSL https://repo.steampowered.com/steam/archive/stable/steam.gpg | sudo tee /usr/share/keyrings/steam.gpg > /dev/null
     echo "deb [arch=amd64,i386 signed-by=/usr/share/keyrings/steam.gpg] https://repo.steampowered.com/steam/ stable steam" | sudo tee /etc/apt/sources.list.d/steam.list
@@ -420,7 +417,7 @@ install_61() { # Steam
     apt_install steam-launcher
 }
 
-install_62() { # Sublime Text
+install_61() { # Sublime Text
     sudo install -d -m 0755 /etc/apt/keyrings
     wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo tee /etc/apt/keyrings/sublimehq-pub.asc > /dev/null
     echo -e 'Types: deb\nURIs: https://download.sublimetext.com/\nSuites: apt/stable/\nSigned-By: /etc/apt/keyrings/sublimehq-pub.asc' | sudo tee /etc/apt/sources.list.d/sublime-text.sources
@@ -428,13 +425,13 @@ install_62() { # Sublime Text
     apt_install sublime-text
 }
 
-install_63() { flatpak_install org.telegram.desktop; }             # Telegram
-install_64() { apt_install thunderbird; }                          # Thunderbird
-install_65() { apt_install timeshift; }                            # Timeshift
-install_66() { apt_install unrar-free; }                           # Unrar Free
-install_67() { apt_install unrar; }                                # Unrar Non-Free
+install_62() { flatpak_install org.telegram.desktop; }             # Telegram
+install_63() { apt_install thunderbird; }                          # Thunderbird
+install_64() { apt_install timeshift; }                            # Timeshift
+install_65() { apt_install unrar-free; }                           # Unrar Free
+install_66() { apt_install unrar; }                                # Unrar
 
-install_68() { # Virtualbox
+install_67() { # Virtualbox
     sudo apt install -y wget gnupg ca-certificates
     wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --dearmor --yes --output /usr/share/keyrings/oracle_vbox_2016.gpg
     echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle_vbox_2016.gpg] https://download.virtualbox.org/virtualbox/debian trixie contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
@@ -442,9 +439,9 @@ install_68() { # Virtualbox
     apt_install virtualbox-7.1
 }
 
-install_69() { apt_install vlc; }                                  # VLC
+install_68() { apt_install vlc; }                                  # VLC
 
-install_70() { # VS Code
+install_69() { # VS Code
     sudo apt update
     sudo apt install -y wget gpg apt-transport-https
     wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > "$INSTALL_DIR/microsoft.gpg"
@@ -462,7 +459,7 @@ EOF
     apt_install code
 }
 
-install_71() { # WineHQ Stable
+install_70() { # WineHQ Stable
     sudo mkdir -pm755 /etc/apt/keyrings
     wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor --yes -o /etc/apt/keyrings/winehq-archive.key -
     sudo dpkg --add-architecture i386
@@ -471,9 +468,8 @@ install_71() { # WineHQ Stable
     apt_install winehq-stable
 }
 
-install_72() { apt_install wireshark; }                            # Wireshark
-install_73() { apt_install xfce4-screensaver; }                    # XFCE4 Screen Saver
-install_74() { apt_install xfce4-taskmanager; }                    # XFCE4 Task Manager
+install_71() { apt_install wireshark; }                            # Wireshark
+install_72() { apt_install xfce4-screensaver; }                    # XFCE4 Screen Saver
 
 # ---------------------------------------------------------------------------
 # Menu
