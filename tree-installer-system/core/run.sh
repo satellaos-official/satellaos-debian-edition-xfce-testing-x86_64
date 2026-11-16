@@ -55,4 +55,8 @@ sudo apt install --no-install-recommends -y \
   xfce4-taskmanager \
   xfce4-terminal \
   xfwm4 \
-  xorg
+  xorg \
+  zram-tools
+
+# Enable ZRAM Tool
+  sudo systemctl enable --now zramswap
