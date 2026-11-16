@@ -9,9 +9,9 @@ sudo bash /tmp/Layan-gtk-theme-all-color/install.sh -s
 rm -rf "/tmp/Layan-gtk-theme-all-color"
 
 # Icon Theme
-git clone --depth 1 https://github.com/vinceliuice/Tela-icon-theme.git "/tmp/Tela-icon-theme"
-sudo bash /tmp/Tela-icon-theme/install.sh -a -d /usr/share/icons
-rm -rf "/tmp/Tela-icon-theme"
+git clone --depth 1 https://github.com/satellaos-official/tela-icon-theme-fixed.git "/tmp/tela-icon-theme-fixed"
+sudo bash /tmp/tela-icon-theme-fixed/install.sh -a -d /usr/share/icons
+rm -rf "/tmp/tela-icon-theme-fixed"
 
 # Curcor Theme
 git clone --depth 1 https://github.com/satellaos-official/volantes-cursors-compiled.git "/tmp/volantes-cursors-compiled"
