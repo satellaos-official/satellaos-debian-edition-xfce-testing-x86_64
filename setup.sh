@@ -34,5 +34,4 @@ bash $SCRIPT_DIR/tree-installer-system/font-installer/run.sh
 
 bash $SCRIPT_DIR/tree-installer-system/program-installer/run.sh
 
-
 sudo reboot
