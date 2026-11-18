@@ -30,6 +30,7 @@ sudo apt install --no-install-recommends -y \
   rsync \
   thunar \
   thunar-archive-plugin \
+  tlp \
   tumbler \
   tumbler-plugins-extra \
   udiskie \
