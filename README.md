@@ -52,7 +52,8 @@ Instead, it transforms an existing Debian Netinst installation using a collectio
 
 ### Touchscreen Support
 
-We currently do not own any touchscreen hardware for testing. As a result, touchscreen-related issues may occur.
+Touch interface support is not finished yet, work is still in progress.
+Additionally, since we recently acquired touch hardware for testing, we will be improving this aspect moving forward.
 
 ### Gaming
 
@@ -76,7 +77,6 @@ You may consider the following alternatives:
 > - Adobe Audition → Audacity
 > - Adobe XD → Penpot
 > - Adobe Animate → Synfig Studio
-
 
 We recommend trying these alternatives before completely switching from Windows.
 
