@@ -1,59 +1,59 @@
 {
-  "instances" : {
-    "2" : {
-      "button-image" : "/usr/share/satellaos-logos/light/satellaos-logo-light.svg",
-      "fullscreen-layout" : 0,
-      "grid-cols" : 8,
-      "grid-rows" : 4,
-      "height-pct" : 80,
-      "mode" : 0,
-      "modern" : {
-        "actions" : {
-          "0" : {
-            "command" : "xdg-open \"https://duckduckgo.com/?q=%u\"",
-            "name" : "Web search",
-            "prefix" : "?"
+  "instances": {
+    "9": {
+      "button-image": "distributor-logo-satellaos",
+      "fullscreen-layout": 0,
+      "grid-cols": 8,
+      "grid-rows": 4,
+      "height-pct": 80,
+      "mode": 0,
+      "modern": {
+        "actions": {
+          "0": {
+            "command": "xdg-open \"https://duckduckgo.com/?q=%u\"",
+            "name": "Web search",
+            "prefix": "?"
           },
-          "1" : {
-            "command" : "xdg-open \"https://en.wikipedia.org/w/index.php?search=%u\"",
-            "name" : "Wikipedia",
-            "prefix" : "w "
+          "1": {
+            "command": "xdg-open \"https://en.wikipedia.org/w/index.php?search=%u\"",
+            "name": "Wikipedia",
+            "prefix": "w "
           },
-          "2" : {
-            "command" : "sh -c %s",
-            "name" : "Run command",
-            "prefix" : "!"
+          "2": {
+            "command": "sh -c %s",
+            "name": "Run command",
+            "prefix": "!"
           },
-          "count" : 3
+          "count": 3
         },
-        "category-icon-size" : 16,
-        "category-style" : 0,
-        "commands" : {
-          "edit" : {
-            "command" : "menulibre",
-            "enabled" : true
+        "category-icon-size": 16,
+        "category-style": 0,
+        "commands": {
+          "edit": {
+            "command": "menulibre",
+            "enabled": true
           },
-          "lock" : {
-            "command" : "xflock4",
-            "enabled" : true
+          "lock": {
+            "command": "xflock4",
+            "enabled": true
           },
-          "logout" : {
-            "command" : "xfce4-session-logout",
-            "enabled" : true
+          "logout": {
+            "command": "xfce4-session-logout",
+            "enabled": true
           },
-          "settings" : {
-            "command" : "xfce4-settings-manager",
-            "enabled" : true
+          "settings": {
+            "command": "xfce4-settings-manager",
+            "enabled": true
           },
-          "switch-user" : {
-            "command" : "dm-tool switch-to-greeter",
-            "enabled" : false
+          "switch-user": {
+            "command": "dm-tool switch-to-greeter",
+            "enabled": false
           }
         },
-        "commands-position" : 1,
-        "default-view" : -2,
-        "double-click" : false,
-        "favorites" : [
+        "commands-position": 1,
+        "default-view": -2,
+        "double-click": false,
+        "favorites": [
           "xfce4-web-browser.desktop",
           "xfce4-file-manager.desktop",
           "xfce4-terminal-emulator.desktop",
@@ -64,25 +64,22 @@
           "galculator.desktop",
           "satella-system-info.desktop"
         ],
-        "hover-switch" : false,
-        "item-icon-size" : 32,
-        "recent" : [
-          "satella-system-info.desktop",
-          "org.xfce.mousepad.desktop"
-        ],
-        "recent-max" : 10,
-        "search-position" : 0,
-        "show-all" : true,
-        "show-descriptions" : true,
-        "show-favorites" : true,
-        "show-recent" : true,
-        "show-tooltips" : false,
-        "show-user-avatar" : true,
-        "show-user-name" : true,
-        "sidebar" : 0
+        "hover-switch": false,
+        "item-icon-size": 32,
+        "recent": [],
+        "recent-max": 10,
+        "search-position": 0,
+        "show-all": true,
+        "show-descriptions": true,
+        "show-favorites": true,
+        "show-recent": true,
+        "show-tooltips": false,
+        "show-user-avatar": true,
+        "show-user-name": true,
+        "sidebar": 0
       },
-      "opacity" : 90,
-      "width-pct" : 50
+      "opacity": 90,
+      "width-pct": 50
     }
   }
 }
