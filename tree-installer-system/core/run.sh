@@ -2,6 +2,7 @@
 echo "Installing XFCE and Other Packages"
 sudo apt install --no-install-recommends -y \
   alsa-utils \
+  bc \
   curl \
   dbus-x11 \
   engrampa \
