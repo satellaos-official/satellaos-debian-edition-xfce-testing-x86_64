@@ -60,5 +60,6 @@ sudo apt install --no-install-recommends -y \
   xorg \
   zram-tools
 
-# Enable ZRAM Tool
+# Enable ZRAM Tool and tlp
   sudo systemctl enable --now zramswap
+  sudo systemctl enable --now tlp
